@@ -1,0 +1,16 @@
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = ["flit_core"]
+
+[project]
+name = "mlres"
+version = "1.0.0"
+authors = [
+    {name = "Filip Radović"},
+]
+description = "Time series forecasting. Done for the Machine Learning for Renewable Energy Systems seminar."
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+]

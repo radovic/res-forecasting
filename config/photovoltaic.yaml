@@ -1,0 +1,26 @@
+seed: 2024
+
+model:
+    name: "WaveNet"
+    n_layers: 9
+    n_channels: 256
+    window_size: 288 # equals to 3-day data (3 * 24 * 4)
+    horizon: 96 # equals to 1-day data (1 * 24 * 4)
+    
+training:
+    n_epochs: 30
+    reg_coeff: 0.1
+    batch_size: 32
+    learning_rate: 0.00024541956525855256
+    lr_decay: 0.9467802691286252 # used for exponential scheduler
+    target_idx: 1202 # For PV is 1202
+    log_interval: 100 # log average losses every N gradient updates
+    save_interval: 1000 # save model every N gradient updates
+    validate_every_n_updates: 2000 # validate model every N gradient updates
+
+paths:
+    data_dir: "/home/martius-lab/Desktop/renewable_ml/data/"
+    results_dir: "/home/martius-lab/Desktop/renewable_ml/results/photovoltaic/"
+
+    
+    
